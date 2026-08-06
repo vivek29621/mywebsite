@@ -45,6 +45,31 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
+/* ---------- Background: subtle checkerboard + logo watermark ---------- */
+.bg-checker,
+.bg-logo {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+.bg-checker {
+  inset: 0;
+  background-image: repeating-conic-gradient(rgba(0, 0, 0, 0.05) 0% 25%, transparent 0% 50%);
+  background-size: 26px 26px;
+}
+[data-theme="dark"] .bg-checker {
+  background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.05) 0% 25%, transparent 0% 50%);
+}
+.bg-logo {
+  right: -3vmin;
+  bottom: -3vmin;
+  width: min(56vmin, 460px);
+  opacity: 0.08;
+  transition: opacity 0.25s ease;
+}
+[data-theme="dark"] .bg-logo { opacity: 0.09; }
+.bg-logo img { width: 100%; height: auto; display: block; }
+
 ::selection { background: var(--accent-underline); }
 
 a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.15s ease, color 0.15s ease; }
