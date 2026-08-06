@@ -216,6 +216,7 @@ ul { list-style: none; }
   font-size: 13px;
   color: var(--text-muted);
 }
+.dark-note[hidden] { display: none; }
 .dark-note svg { color: var(--accent); flex-shrink: 0; }
 .note-text-dark { display: none; }
 [data-theme="dark"] .note-text-light { display: none; }
