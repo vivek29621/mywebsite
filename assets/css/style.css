@@ -217,7 +217,11 @@ ul { list-style: none; }
   color: var(--text-muted);
 }
 .dark-note svg { color: var(--accent); flex-shrink: 0; }
-.note-enable {
+.note-text-dark { display: none; }
+[data-theme="dark"] .note-text-light { display: none; }
+[data-theme="dark"] .note-text-dark { display: inline; }
+.note-enable,
+.note-disable {
   border: none;
   cursor: pointer;
   padding: 5px 12px;
@@ -229,16 +233,23 @@ ul { list-style: none; }
   font-weight: 700;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
-[data-theme="dark"] .note-enable { color: #052e1e; }
-.note-enable:hover { opacity: 0.9; transform: translateY(-1px); }
+.note-disable { display: none; }
+[data-theme="dark"] .note-enable { display: none; }
+[data-theme="dark"] .note-disable { display: inline-flex; }
+.note-enable:hover,
+.note-disable:hover { opacity: 0.9; transform: translateY(-1px); }
 .note-close {
   border: none;
   background: none;
   cursor: pointer;
   color: var(--text-faint);
-  font-size: 12px;
-  padding: 4px 6px;
-  border-radius: 6px;
+  font-size: 13px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .note-close:hover { color: var(--text); background: var(--border); }
 

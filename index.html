@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png" />
   <link rel="icon" type="image/png" sizes="128x128" href="assets/img/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
-  <link rel="stylesheet" href="assets/css/style.css?v=7" />
+  <link rel="stylesheet" href="assets/css/style.css?v=8" />
   <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
 </head>
 <body>
@@ -61,9 +61,11 @@
         <p class="hero-note"><span class="dot" aria-hidden="true"></span> Open to Forward Deployed Engineer, Security Engineer, Solutions Engineer &amp; Application Security roles</p>
         <div class="dark-note" id="darkNote" hidden>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 019.5 3.5 8.5 8.5 0 1020.5 14.5z"/></svg>
-          <span>Enable dark mode for a better experience</span>
-          <button class="note-enable" id="darkEnable" type="button">Enable</button>
-          <button class="note-close" id="darkDismiss" type="button" aria-label="Dismiss">✕</button>
+          <span class="note-text-light">Enable dark mode for a better experience</span>
+          <span class="note-text-dark">Dark mode on — disable anytime</span>
+          <button class="note-enable" type="button" onclick="document.documentElement.dataset.theme='dark';try{localStorage.setItem('theme','dark')}catch(e){};this.closest('.dark-note').hidden=true">Enable</button>
+          <button class="note-disable" type="button" onclick="document.documentElement.dataset.theme='light';try{localStorage.setItem('theme','light')}catch(e){};this.closest('.dark-note').hidden=true">Disable</button>
+          <button class="note-close" type="button" aria-label="Dismiss" onclick="try{localStorage.setItem('darkNoteDismissed','1')}catch(e){};this.closest('.dark-note').hidden=true">✕</button>
         </div>
       </div>
     </section>
@@ -206,6 +208,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=7"></script>
+  <script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

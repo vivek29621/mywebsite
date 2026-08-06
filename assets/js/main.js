@@ -28,27 +28,12 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* Dark mode suggestion (always visible until dismissed) */
+  /* Dark mode suggestion (always visible until dismissed; buttons are inline) */
   var darkNote = document.getElementById("darkNote");
-  var darkEnable = document.getElementById("darkEnable");
-  var darkDismiss = document.getElementById("darkDismiss");
   if (darkNote) {
     var noteDismissed = false;
     try { noteDismissed = localStorage.getItem("darkNoteDismissed") === "1"; } catch (e) {}
     if (!noteDismissed) darkNote.hidden = false;
-  }
-  if (darkEnable) {
-    darkEnable.addEventListener("click", function () {
-      root.dataset.theme = "dark";
-      try { localStorage.setItem("theme", "dark"); } catch (e) {}
-      darkNote.hidden = true;
-    });
-  }
-  if (darkDismiss) {
-    darkDismiss.addEventListener("click", function () {
-      darkNote.hidden = true;
-      try { localStorage.setItem("darkNoteDismissed", "1"); } catch (e) {}
-    });
   }
 
   /* Footer year */
