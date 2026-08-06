@@ -28,6 +28,30 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
+  /* Resume paywall popover */
+  var lock = document.getElementById("resumeLock");
+  var pop = document.getElementById("resumePop");
+  if (lock && pop) {
+    lock.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = pop.hidden;
+      pop.hidden = !open;
+      lock.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", function (e) {
+      if (!pop.hidden && !pop.contains(e.target) && e.target !== lock) {
+        pop.hidden = true;
+        lock.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !pop.hidden) {
+        pop.hidden = true;
+        lock.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   /* Footer year */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

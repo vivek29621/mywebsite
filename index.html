@@ -51,11 +51,18 @@
           <span aria-hidden="true">·</span>
           <span>New York, USA</span>
           <span aria-hidden="true">·</span>
-          <a class="resume-lock" href="assets/resume/Vivek_Resume_cybersecurity.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 018 0v3.5"/></svg>
-            Resume
-            <span class="price-tag">$1</span>
-          </a>
+          <span class="resume-wrap">
+            <button class="resume-lock" id="resumeLock" type="button" aria-expanded="false" aria-controls="resumePop">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 018 0v3.5"/></svg>
+              Resume
+            </button>
+            <div class="resume-pop" id="resumePop" hidden>
+              <p class="resume-pop__title">Unlock my résumé <span class="price-tag">$1</span></p>
+              <p class="resume-pop__text">Pay $1 and the PDF is yours — instant download after payment.</p>
+              <a class="btn-pay" href="#" id="payLink" target="_blank" rel="noopener">Pay &amp; download</a>
+              <p class="resume-pop__foot">Secure checkout · delivered instantly</p>
+            </div>
+          </span>
         </p>
         <p class="hero-note"><span class="dot" aria-hidden="true"></span> Open to Forward Deployed Engineer, Security Engineer, Solutions Engineer &amp; Application Security roles</p>
       </div>
