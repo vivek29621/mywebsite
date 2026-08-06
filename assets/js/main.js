@@ -28,12 +28,12 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* Dark mode suggestion (always visible until dismissed; buttons are inline) */
+  /* Dark mode suggestion: visible by default, hidden only if dismissed (buttons are inline) */
   var darkNote = document.getElementById("darkNote");
   if (darkNote) {
     var noteDismissed = false;
     try { noteDismissed = localStorage.getItem("darkNoteDismissed") === "1"; } catch (e) {}
-    if (!noteDismissed) darkNote.hidden = false;
+    if (noteDismissed) darkNote.hidden = true;
   }
 
   /* Footer year */
