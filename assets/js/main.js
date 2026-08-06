@@ -28,11 +28,11 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* Dark mode suggestion (light theme only, dismissible once) */
+  /* Dark mode suggestion (always visible until dismissed) */
   var darkNote = document.getElementById("darkNote");
   var darkEnable = document.getElementById("darkEnable");
   var darkDismiss = document.getElementById("darkDismiss");
-  if (darkNote && root.dataset.theme === "light") {
+  if (darkNote) {
     var noteDismissed = false;
     try { noteDismissed = localStorage.getItem("darkNoteDismissed") === "1"; } catch (e) {}
     if (!noteDismissed) darkNote.hidden = false;
