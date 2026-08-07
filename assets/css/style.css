@@ -4,12 +4,12 @@
    ============================================================ */
 
 :root {
-  --bg: #ffffff;
-  --bg-soft: #fafafa;
+  --bg: #fbfaf8;
+  --bg-soft: #f4f3f0;
   --text: #1a1a1a;
   --text-muted: #5c5c5c;
   --text-faint: #8a8a8a;
-  --border: #e8e8e8;
+  --border: #e7e5e0;
   --accent: #0a66c2;
   --accent-underline: rgba(10, 102, 194, 0.25);
   --link: #1a1a1a;
@@ -54,20 +54,20 @@ body {
 }
 .bg-checker {
   inset: 0;
-  background-image: repeating-conic-gradient(rgba(0, 0, 0, 0.05) 0% 25%, transparent 0% 50%);
+  background-image: repeating-conic-gradient(rgba(0, 0, 0, 0.028) 0% 25%, transparent 0% 50%);
   background-size: 26px 26px;
 }
 [data-theme="dark"] .bg-checker {
-  background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.05) 0% 25%, transparent 0% 50%);
+  background-image: repeating-conic-gradient(rgba(255, 255, 255, 0.03) 0% 25%, transparent 0% 50%);
 }
 .bg-logo {
   right: -3vmin;
   bottom: -3vmin;
   width: min(56vmin, 460px);
-  opacity: 0.08;
+  opacity: 0.05;
   transition: opacity 0.25s ease;
 }
-[data-theme="dark"] .bg-logo { opacity: 0.09; }
+[data-theme="dark"] .bg-logo { opacity: 0.06; }
 .bg-logo img { width: 100%; height: auto; display: block; }
 
 ::selection { background: var(--accent-underline); }
