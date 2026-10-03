@@ -24,6 +24,6 @@ python -m http.server 8000
 
 ## Deploy
 
-Push to `main` — GitHub Pages serves the repo root automatically.
+Push to `main` — Vercel deploys to https://www.vivek2962.com. GitHub Pages is disabled.
 
 © Vivekananda Reddy Murugesh. No BS.

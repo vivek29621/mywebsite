@@ -6,11 +6,15 @@
   var toggle = document.getElementById("themeToggle");
   var root = document.documentElement;
 
-  toggle.addEventListener("click", function () {
-    var next = root.dataset.theme === "dark" ? "light" : "dark";
-    root.dataset.theme = next;
-    try { localStorage.setItem("theme", next); } catch (e) {}
-  });
+  if (toggle) {
+    toggle.setAttribute("aria-pressed", String(root.dataset.theme === "dark"));
+    toggle.addEventListener("click", function () {
+      var next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      toggle.setAttribute("aria-pressed", String(next === "dark"));
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  }
 
   /* Subtle reveal on scroll */
   var revealEls = document.querySelectorAll(".reveal");
