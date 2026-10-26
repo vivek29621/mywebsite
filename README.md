@@ -1,6 +1,6 @@
 # Vivek — Personal Website
 
-Personal page for **Vivekananda Reddy Murugesh** — Cybersecurity Engineer
+Personal page for **Vivek Murugesh** — Cybersecurity Engineer
 securing web applications, APIs, cloud, and network environments.
 
 Light, clean, minimal. System fonts, content-first, dark-mode toggle.
@@ -26,4 +26,4 @@ python -m http.server 8000
 
 Push to `main` — Vercel deploys to https://www.vivek2962.com. GitHub Pages is disabled.
 
-© Vivekananda Reddy Murugesh. No BS.
+© Vivek Murugesh. No BS.
